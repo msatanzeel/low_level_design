@@ -1,18 +1,16 @@
 package org.example;
 
-import lombok.*;
-
 
 public class Guitar {
     private String serialNumber;
-    private String builder;
+    private Builder builder;
     private String model;
-    private String type;
-    private String backWood;
-    private String topWood;
+    private Type type;
+    private Wood backWood;
+    private Wood topWood;
     private double price;
 
-    public Guitar(String serialNumber, String builder, String model, String type, String backWood, String topWood, double price) {
+    public Guitar(String serialNumber, Builder builder, String model, Type type, Wood backWood, Wood topWood, double price) {
         this.serialNumber = serialNumber;
         this.builder = builder;
         this.model = model;
@@ -26,7 +24,7 @@ public class Guitar {
         return serialNumber;
     }
 
-    public String getBuilder() {
+    public Builder getBuilder() {
         return builder;
     }
 
@@ -34,15 +32,15 @@ public class Guitar {
         return model;
     }
 
-    public String getType() {
+    public Type getType() {
         return type;
     }
 
-    public String getBackWood() {
+    public Wood getBackWood() {
         return backWood;
     }
 
-    public String getTopWood() {
+    public Wood getTopWood() {
         return topWood;
     }
 

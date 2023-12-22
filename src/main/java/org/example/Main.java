@@ -8,10 +8,10 @@ public class Main {
 
         Inventory inventory = new Inventory();
 
-        inventory.addGuitar("1234567890", "John", "Guitar", "Bass", "Black", "White", 100.0);
-        inventory.addGuitar("1234567890", "Duke", "Guitar", "Electric", "Black", "White", 100.0);
+        inventory.addGuitar("1234567890", Builder.FENDER, "Guitar", Type.Electric, Wood.CEDAR, Wood.ALDER, 100.0);
+        inventory.addGuitar("1234567890", Builder.GIBSON, "Guitar", Type.Bass, Wood.CEDAR, Wood.ALDER, 100.0);
 
-        Guitar idealGuitar = new Guitar("1234567890", "john", "Guitar", "Bass", "Black", "white", 100.0);
+        Guitar idealGuitar = new Guitar("1234567890", Builder.FENDER, "Guitar", Type.Electric, Wood.CEDAR, Wood.ALDER, 100.0);
 
         if(inventory.search(idealGuitar) != null) {
             System.out.println("Ideal guitar found");
