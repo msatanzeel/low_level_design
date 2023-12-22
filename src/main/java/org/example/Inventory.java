@@ -31,36 +31,40 @@ public class Inventory {
         return null;
     }
 
+    public boolean compare(String ideal, String actual){
+        if(ideal == null || ideal.equals(""))
+            return true;
+        ideal = ideal.toLowerCase();
+        actual = actual.toLowerCase();
+        return ideal.equals(actual);
+    }
+
+
     public Guitar search(Guitar idealGuitar){
 //        Ignore the price and serialNumber fields
         for(Guitar guitar : this.guitars){
             boolean found = true;
 
-            if(idealGuitar.getBuilder()!=null){
-                if(idealGuitar.getBuilder().equals(guitar.getBuilder()) == false){
-                    found = false;
-                }
+            if(compare(idealGuitar.getBuilder(), guitar.getBuilder()) == false){
+                found = false;
             }
-            if(idealGuitar.getModel()!=null){
-                if(idealGuitar.getModel().equals(guitar.getModel()) == false){
-                    found = false;
-                }
+
+            if(compare(idealGuitar.getModel(), guitar.getModel()) == false){
+                found = false;
             }
-            if(idealGuitar.getType()!=null){
-                if(idealGuitar.getType().equals(guitar.getType()) == false){
-                    found = false;
-                }
+
+            if(compare(idealGuitar.getType(), guitar.getType()) == false){
+                found = false;
             }
-            if(idealGuitar.getBackWood()!=null){
-                if(idealGuitar.getBackWood().equals(guitar.getBackWood()) == false){
-                    found = false;
-                }
+
+            if(compare(idealGuitar.getBackWood(), guitar.getBackWood())==false){
+                found = false;
             }
-            if(idealGuitar.getTopWood()!=null){
-                if(idealGuitar.getTopWood().equals(guitar.getTopWood()) == false){
-                    found = false;
-                }
+
+            if(compare(idealGuitar.getTopWood(), guitar.getTopWood())==false){
+                found = false;
             }
+
             if(found){
                 return guitar;
             }

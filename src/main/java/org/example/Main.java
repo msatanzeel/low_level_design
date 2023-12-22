@@ -11,7 +11,7 @@ public class Main {
         inventory.addGuitar("1234567890", "John", "Guitar", "Bass", "Black", "White", 100.0);
         inventory.addGuitar("1234567890", "Duke", "Guitar", "Electric", "Black", "White", 100.0);
 
-        Guitar idealGuitar = new Guitar("1234567890", "John", "Guitar", "Bass", "Black", "White", 100.0);
+        Guitar idealGuitar = new Guitar("1234567890", "john", "Guitar", "Bass", "Black", "white", 100.0);
 
         if(inventory.search(idealGuitar) != null) {
             System.out.println("Ideal guitar found");
