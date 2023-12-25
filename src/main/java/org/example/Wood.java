@@ -1,0 +1,5 @@
+package org.example;
+
+public enum Wood {
+    INDIAN_ROSEWOOD, MAHOGANY, BRAZILIAN_ROSEWOOD, COCOBOLO, CEDAR, ALDER, SITKA;
+}

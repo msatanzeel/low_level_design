@@ -8,11 +8,11 @@ public class Main {
 
         Inventory inventory = new Inventory();
 
-        inventory.addGuitar("1234567890", 101.0, new GuitarSpecs(Builder.GIBSON, "Guitar", Type.Bass, Wood.ALDER, Wood.MAHOGANY ));
-        inventory.addGuitar("1230567890",101.0, new GuitarSpecs(Builder.GIBSON, "Guitar", Type.Bass, Wood.ALDER, Wood.MAHOGANY));
+        inventory.addGuitar("1234567890", 101.0, new GuitarSpecs(Builder.GIBSON, "Guitar", Type.Bass, Wood.ALDER, Wood.MAHOGANY, 12 ));
+        inventory.addGuitar("1230567890",101.0, new GuitarSpecs(Builder.GIBSON, "Guitar", Type.Bass, Wood.ALDER, Wood.MAHOGANY, 12));
 
 
-        GuitarSpecs idealGuitarSpecs = new GuitarSpecs(Builder.GIBSON, "Guitar", Type.Bass, Wood.ALDER, Wood.MAHOGANY);
+        GuitarSpecs idealGuitarSpecs = new GuitarSpecs(Builder.GIBSON, "Guitar", Type.Bass, Wood.ALDER, Wood.MAHOGANY, 12);
 
         List<Guitar> searchResults = inventory.search(idealGuitarSpecs);
         if(searchResults.size()>0) {
